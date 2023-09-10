@@ -16,10 +16,9 @@ const server = fastify();
 
 const database = new DataBaseMemory();
 
-server.get("/videos", () => {
-  const videos = database.list();
-
-  console.log(videos);
+server.get("/videos", (req) => {
+  const search = req.query.search
+  const videos = database.list(search);
 
   return videos;
 });
