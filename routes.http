@@ -2,8 +2,8 @@ POST http://localhost:3333/videos
 Content-Type: application/json
 
 {
-  "title": "Vídeo 01",
-  "description": "Este é o vídeo 01",
+  "title": "Vídeo 02",
+  "description": "Este é o vídeo 02",
   "duration": 100
 }
 
@@ -21,3 +21,7 @@ Content-Type: application/json
   "description": "Este é o vídeo 01 editado",
   "duration": 100
 }
+
+###
+
+DELETE http://localhost:3333/videos/3d29b316-42ff-4043-b772-46bef8444ca3

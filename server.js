@@ -50,8 +50,12 @@ server.put("/videos/:id", (req, reply) => {
   return reply.status(204).send();
 });
 
-server.delete("/videos/:id", () => {
-  return "Hello World";
+server.delete("/videos/:id", (req, reply) => {
+  const videoId = req.params.id;
+
+  database.delete(videoId)
+
+  reply.status(204).send()
 });
 
 server.listen({
