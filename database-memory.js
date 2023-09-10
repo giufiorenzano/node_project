@@ -8,7 +8,7 @@ export class DataBaseMemory {
   //Map é como se fosse um objeto mas com uns outros métodos
 
   list() {
-    return this.#videos.values();
+    return Array.from(this.#videos.values());
   }
 
   create(video) {

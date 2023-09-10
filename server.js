@@ -16,8 +16,12 @@ const server = fastify();
 
 const database = new DataBaseMemory();
 
-server.get("/", () => {
-  return "Hello World";
+server.get("/videos", () => {
+  const videos = database.list()
+
+  console.log(videos)
+
+  return videos
 });
 
 server.post("/videos", (req, reply) => {
